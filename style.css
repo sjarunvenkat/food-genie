@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: bisque;
+}
+
+header {
+  background-color: rgba(255, 34, 0, 0.818);
+  color: aliceblue;
+  text-transform: uppercase;
+  padding: 100px 0px 50px 0px;
+  text-align: center;
+}
+
+#inputCategory {
+  margin-top: 50px;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(241, 204, 181);
+  color: black;
+}
+
+#btn {
+  padding: 10px;
+  background-color: rgb(255, 204, 0);
+}
+
+.random-meal {
+  background-color: beige;
+  padding: 20px;
+  text-align: center;
+}
+
+.random-meal h1,
+img,
+p {
+  padding: 10px;
+}
+
+dialog {
+  margin: 100px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+dialog p {
+  padding: 5px;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#closeDialog {
+  margin: 20px;
+  padding: 10px;
+}
+
+.search-results {
+  padding: 30px;
+  text-align: center;
+}
+
+.dishes {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    .random-meal h1 {
+      font-size: 1.5rem;
+    }
+  
+    .random-meal p {
+      font-size: 1rem;
+    }
+  
+    dialog {
+      margin: 30px;
+    }
+
+    .dishes{
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+
+    body{
+        width: 100%;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .random-meal h1 {
+      font-size: 1.2rem;
+    }
+  
+    .random-meal p {
+      font-size: 0.9rem;
+    }
+  
+    .dishes {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+  
+    .dishes .dish img {
+      max-width: 120px;
+    }
+  }
